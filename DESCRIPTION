@@ -1,11 +1,10 @@
 Package: sawnuti
 Type: Package
 Title: Compareing Sequences with Non-Uniform Time Intervals
-Version: 0.1
-Date: 2018-06-11
-Author: Alexander Murph <acm026@bucknell.edu>
-Maintainer: Alexander Murph <acm026@bucknell.edu>
-Description: The SAWNUTI algorithm performs sequence comparison for finite sequences of discrete events with non-uniform time intervals. Further description of the algorithm can be found in the paper Comparing Finite Sequences of Discrete Events with Non-Uniform Time Intervals by Flynt, Murph, and King
+Version: 0.1.0
+Date: 2021-11-06
+Authors@R: person("Alexander", "Murph", email = "acm026@bucknell.edu",
+                  role = c("aut", "cre"))
+Description: The SAWNUTI algorithm performs sequence comparison for finite sequences of discrete events with non-uniform time intervals. Further description of the algorithm can be found in the paper: A. Murph, A. Flynt, B. R. King (2021). Comparing finite sequences of discrete events with non-uniform time intervals, Sequential Analysis, 40(3), 291-313. <doi:10.1080/07474946.2021.1940491>.
 License:  MIT + file LICENSE
-LazyData: TRUE
 RoxygenNote: 6.0.1

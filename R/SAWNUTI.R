@@ -1,15 +1,16 @@
-source("R/helper_functions/local.R")
-source("R/helper_functions/global.R")
+source("R/local.R")
+source("R/global.R")
 
-sawnuti <- function(.string1, .string2, .times1, .times2, .global = T,
-                    .alpha, .match_function, .gap_penalty) {
+sawnuti <- function(string1, string2, times1, times2, global = T,
+                    alpha, match_function, gap_penalty) {
   #' Compare Sequences with Non-Uniform Time Intervals
   #'
   #' @description The SAWNUTI algorithm performs sequence comparison for finite
   #' sequences of discrete events with non-uniform time intervals.  Further
-  #' description of the algorithm can be found in the paper
-  #' Comparing Finite Sequences of Discrete Events with Non-Uniform Time Intervals
-  #' by Flynt, Murph, and King
+  #' description of the algorithm can be found in the paper:
+  #' 
+  #' A. Murph, A. Flynt, B. R. King (2021). Comparing finite sequences of discrete events with non-uniform time intervals, 
+  #' Sequential Analysis, 40(3), 291-313. <doi:10.1080/07474946.2021.1940491>.
   #'
   #'
   #' @param string1 character. Character of representations of each element in the first sequence
@@ -67,23 +68,23 @@ sawnuti <- function(.string1, .string2, .times1, .times2, .global = T,
   #' @importFrom base paste
 
   if(global) {
-    matricies = .propogate_matrix_global(string_1 = .string1,
-                                        string_2 = .string1,
-                                        times_1 = .times1,
-                                        times_2 = .times2,
-                                        gap_score = .gap_penalty, align_score = .match_function,
-                                        time_proportion = .alpha)
-    score = .derive_score_global(matricies)
-    alignment = .print_comparison_global(matricies, .string1, .string2)
+    matricies = propogate_matrix_global(string_1 = string1,
+                                        string_2 = string1,
+                                        times_1 = times1,
+                                        times_2 = times2,
+                                        gap_score = gap_penalty, align_score = match_function,
+                                        time_proportion = alpha)
+    score = derive_score_global(matricies)
+    alignment = print_comparison_global(matricies, string1, string2)
   } else {
-    matricies = .propogate_matrix_local(string_1 = .string1,
-                                       string_2 = .string1,
-                                       times_1 = .times1,
-                                       times_2 = .times2,
-                                       gap_score = .gap_penalty, align_score = .match_function,
-                                       time_proportion = .alpha)
-    score = .derive_score_local(matricies)
-    alignment = .print_comparison_local(matricies, .string1, .string2)
+    matricies = propogate_matrix_local(string_1 = string1,
+                                       string_2 = string1,
+                                       times_1 = times1,
+                                       times_2 = times2,
+                                       gap_score = gap_penalty, align_score = match_function,
+                                       time_proportion = alpha)
+    score = derive_score_local(matricies)
+    alignment = print_comparison_local(matricies, string1, string2)
   }
   results = list(matricies[[1]], score, alignment)
   names(results) = c("ScoreingMatrix", "AlignmentScore", "Alignment")

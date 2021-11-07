@@ -41,9 +41,8 @@ Vector containing 'similarity score', 'alignment', and 'scoring matrix'.
 \description{
 The SAWNUTI algorithm performs sequence comparison for finite
 sequences of discrete events with non-uniform time intervals.  Further
-description of the algorithm can be found in the paper
-Comparing Finite Sequences of Discrete Events with Non-Uniform Time Intervals
-by Flynt, Murph, and King
+description of the algorithm can be found in the paper:
+A. Murph, A. Flynt, B. R. King (2021). Comparing finite sequences of discrete events with non-uniform time intervals, Sequential Analysis, 40(3), 291-313. <doi:10.1080/07474946.2021.1940491>.
 }
 \details{
 Zero-one scale of all time values in the entire dataset is assumed before calculation.
@@ -57,28 +56,11 @@ this alignment which only takes in two particular observations.
 }
 
 \examples{
-> matchFunction = function(a,b){ifelse(a==b, 1, -1)}
+matchFunction = function(a,b){ifelse(a==b, 1, -1)}
 
-> sawnuti(string1 = "a b c", string2 = "d b c", "1 2 3",
-"3 2 1", alpha = 1, match_function = matchFunction, gap_penalty = 1)
-
-$ScoreingMatrix
-[,1] [,2] [,3] [,4]
-[1,]    0   -3   -5   -6
-[2,]   -3   -1   -4   -5
-[3,]   -1   -1    0   -2
-[4,]   -4   -4   -3   -1
-
-$AlignmentScore
-[1] "-1"
-
-$Alignment
-[,1] [,2] [,3]
-[1,] "d"  "b"  "c"
-[2,] "|"  "|"  "|"
-[3,] "a"  "b"  "c"
+sawnuti(string1="a b c", string2="d b c", times1="1 2 3", 
+times2="3 2 1", alpha = 1, match_function = matchFunction, gap_penalty = 1)
 }
 \references{
-Flynt A., King B. R., Murph A. C. (2018). Comparing Finite Sequences of
-Discrete Events with Non-Uniform Time Intervals.
+A. Murph, A. Flynt, B. R. King (2021). Comparing finite sequences of discrete events with non-uniform time intervals, Sequential Analysis, 40(3), 291-313.
 }
