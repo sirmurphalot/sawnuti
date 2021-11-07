@@ -2,24 +2,24 @@
 % Please edit documentation in R/SAWNUTI.R
 \name{sawnuti}
 \alias{sawnuti}
-\title{Compare Sequences with Non-Uniform Time Intervals}
+\title{Comparing Sequences with Non-Uniform Time Intervals}
 \usage{
 sawnuti(string1, string2, times1, times2, global = T, alpha,
 match_function, gap_penalty)
 }
 \arguments{
 \item{string1}{character. Character of representations of each element in the first sequence
-seperated by a single white space.}
+separated by a single white space.}
 
 \item{string2}{character. Character of representations of each element in the first sequence
-seperated by a single white space.}
+separated by a single white space.}
 
 \item{times1}{character. Numerical time values between each value in the first sequence.
-Should be written as a single character string, where each value is seperated by a single white
+Should be written as a single character string, where each value is separated by a single white
 space.}
 
 \item{times2}{character. Numerical time values between each value in the second sequence.
-Should be written as a single character string, where each value is seperated by a single white
+Should be written as a single character string, where each value is separated by a single white
 space.}
 
 \item{global}{logical. Logical representing whether a user wishes to perform a global or local
@@ -30,7 +30,7 @@ calculation.}
 
 \item{match_function}{R function. Score given for alignment of particular values.  Must be able
 to take in two values from the universe of possible events, and return a numerical score
-for the alignment of those two elements.  Simpliest is a constant score returned, can also be
+for the alignment of those two elements.  Simplest is a constant score returned, can also be
 implemented as a matrix look-up.}
 
 \item{gap_penalty}{numerical. This implementation only allows for constant gap penalties.}
