@@ -3,6 +3,18 @@ Sequence Alignment with Non-Uniform Time Intervals.
 
 **author**: `Alexander Murph`
 
+## Installation
+
+You can install the latest version from CRAN using:
+
+``` r
+install.packages( "sawnuti" )
+```
+
+``` r
+require( "sawnuti" )
+```
+
 For questions, issues or clarifications please reach out to Murph:
 acmurph@unc.edu.
 
