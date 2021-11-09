@@ -1,4 +1,4 @@
-# **BDgraph** 
+# **sawnuti** 
   
 ![](https://www.r-pkg.org/badges/version/sawnuti) ![](https://www.r-pkg.org/badges/last-release/sawnuti)
 
@@ -24,7 +24,8 @@ require( "sawnuti" )
 ```r
 matchFunction = function(a,b){ifelse(a==b, 1, -1)}
 
-sawnuti(string1="a b c", string2="d b c", times1="1 2 3",times2="3 2 1", alpha = 1, match_function = matchFunction, gap_penalty = 1)
+sawnuti(string1="a b c", string2="d b c", times1="1 2 3",times2="3 2 1", alpha = 1, 
+        match_function = matchFunction, gap_penalty = 1)
 # $ScoreingMatrix
 #   [,1] [,2] [,3] [,4]
 # [1,]    0   -3   -5   -6
