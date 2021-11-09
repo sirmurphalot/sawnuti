@@ -1,5 +1,6 @@
 Sequence Alignment with Non-Uniform Time Intervals.
 ----
+![](https://www.r-pkg.org/badges/version/sawnuti) ![](https://www.r-pkg.org/badges/last-release/sawnuti)
 
 **author**: `Alexander Murph`
 
