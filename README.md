@@ -4,7 +4,7 @@
 
 An algorithm for the comparison of two sequences in time.  This package implements the methods introduced in [Murph et al. 2021](https://www.tandfonline.com/doi/full/10.1080/07474946.2021.1940491).
 
-This repository is organized as a stand-alone R package.  For questions, issues, clarifications please reach out to Murph: <acmurph@unc.edu>.  Feel free to email any applications; we'd be happy to highlight them here.
+This repository is organized as a stand-alone R package.  For questions, issues, or clarifications please reach out to Murph: <acmurph@unc.edu>.  Feel free to email any applications; we'd be happy to highlight them here.
 
 
 ## Installation
