@@ -7,4 +7,6 @@ Authors@R: person("Alexander", "Murph", email = "acm026@bucknell.edu",
                   role = c("aut", "cre"))
 Description: The SAWNUTI algorithm performs sequence comparison for finite sequences of discrete events with non-uniform time intervals. Further description of the algorithm can be found in the paper: A. Murph, A. Flynt, B. R. King (2021). Comparing finite sequences of discrete events with non-uniform time intervals, Sequential Analysis, 40(3), 291-313. <doi:10.1080/07474946.2021.1940491>.
 License:  MIT + file LICENSE
+Author: Alexander Murph [aut, cre] (<https://orcid.org/0000-0001-7170-867X>)
+Maintainer: Alexander Murph <acmurph@live.unc.edu>
 RoxygenNote: 6.0.1
